@@ -18,7 +18,14 @@ First, we want to see what kind of file system does it have. The command [`fls`]
 
 ![](image-1.png)
 
-The asterisk `*` indicates a deleted file. The next step is to get the inode number next to it. It is `8202` for the deleted file `sahuang - secret map.osz` in this case. 
+The `r/r` values show the file type. The first `r` (regular file) is the type as saved in the file's file name structure and the second 'r' is the type as saved in the file's metadata structure. 
+
+The number part of the entry shows the Metadata Address associated with this name. 
+
+The asterisk `*` between the file type and the metadata address indicates a deleted file. 
+
+> Little Note about the numbering of TSK: this is exFAT file system, which doesn't use inode number in Unix style, so TSK calculates these numbers as logical directory entry indices inside the root directory cluster chain. 
+
 
 [`icat`](https://www.sleuthkit.org/sleuthkit/man/icat.html) outputs the contents of a file given an inode number. We will use this to retrieves the deleted file. 
 

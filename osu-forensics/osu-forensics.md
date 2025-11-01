@@ -38,3 +38,5 @@ In the `recovered.zip` archive, we can see the handwritten flag in the `flag.png
 
 ![](flag.png)
 Answer: **osu{I_hope_my_h4ndrwr1ting_is_readable_xd}**
+
+I didn't want to go to far with TSK, but it is a powerful tool to have in your toolbox when it comes to disk analyzing. 
